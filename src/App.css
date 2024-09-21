@@ -1,0 +1,289 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main{
+    background-color:black ;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    height: 90px;
+    background-color: black;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    border-bottom: solid#41b8bf 0.5px;
+
+}
+
+.logo {
+    height: 50px;                
+    width: auto;                 
+  }
+
+.login-btn {
+    width: 238px;
+    height: 81px;
+    background-color: black;
+    color:white;
+    border: solid rgb(79, 201, 238) 7px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 24px;
+    margin-left: 60vw;
+    margin-right: 5vw;
+}
+  
+.login-btn:hover {
+    background-color: rgb(79, 201, 238);
+    border: solid white(79, 201, 238);
+    color:black;
+}
+
+.rect{
+    background-color: #221E1E;
+    color: white;
+    height: 875px;
+    
+}
+
+/* Container for background images */
+.background-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between images */
+    margin-top: 20px;
+  }
+  
+  /* Individual tilting image styling */
+  .tilting-image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px; /* To add depth to the tilt effect */
+  }
+  .image1 {
+    top: 130px; /* Position first image */
+    left: 800px; /* Position from left */
+    
+  }
+  
+  .image2 {
+    top: 320px; /* Position second image */
+    left: 1150px; /* Position from left */
+    width: 250px;
+  }
+  
+  .image3 {
+    top: 500px; /* Position third image */
+    left: 900px; /* Position from left */
+  }
+  .tilting-image::before {
+    content: '';
+    position: absolute;
+    top: 10px; /* Adjust shadow position */
+    left: 10px; /* Adjust shadow position */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Shadow color */
+    border-radius: 10%; /* Optional: add rounded corners */
+    z-index: -1; /* Place it behind the image */
+    filter: blur(10px); /* Blurs the shadow */
+  }
+  
+  .tilting-image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    display: block;
+    object-fit: cover;
+    transform: rotate(5deg); /* Constant tilt */
+    
+  }
+  
+  /* Optional: Add a subtle animation */
+  @keyframes tiltAnimation {
+    0%, 100% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(10deg); /* Slightly less tilt */
+    }
+  }
+  
+  .tilting-image img {
+    animation: tiltAnimation 1.5s infinite alternate; /* Tilts back and forth */
+  }
+.name{
+    color:aquamarine;
+    padding-left: 84px;
+    padding-top: 125px;
+    font-size: 70px;
+
+}
+.name h1{
+    padding-top: 220px;
+    
+}
+
+.tagline{
+    padding-left: 84px;
+    font-size: 20px;
+}
+
+.start{
+    padding-top: 50px;
+}
+
+.getstarted{
+    
+    width: 238px;
+    height: 81px;
+    background-color: black;
+    color:white;
+    border: solid rgb(79, 201, 238);
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-left: 80px;
+    
+}
+
+/* .gravitas{
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    animation: rightToLeft 10s linear infinite;
+    font-size: 24px;
+    gap:2cm;
+    
+
+}
+
+@keyframes rightToLeft{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+} */
+.scrolling-text {
+    width: 100%; /* Full width of the container */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .text-content {
+    display: flex;
+    white-space: nowrap;
+    animation: infiniteScroll 10s linear infinite;
+  }
+  
+  .text-content span {
+    display: inline-block;
+    padding-right: 2cm; /* Adjust this for spacing */
+  }
+  
+  /* Animation to move text */
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+.login{
+    
+    border: solid cyan 2px;
+    border-radius: 7px;
+    height: 350px;
+    background-color: #221E1E;
+    align-items: center;
+    color: aliceblue;
+    
+}
+.l{
+    margin-left: 35%;
+    font-size: 50px;
+}
+
+.bo{
+    background-color: black;
+}
+
+.cadmi, .coord, .chead {
+    width: 700px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    border: 2px dashed rgb(79, 201, 238); /* Dashed border to match the style */
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-left: calc(50vw - 350px); /* Center horizontally (adjusting for the width) */
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.cadmi:hover, .coord:hover, .chead:hover {
+    background-color: #444; /* Darker background on hover */
+    transition: background-color 0.3s ease;
+}
+   
+.lead{
+    background-color: black;
+    height: 1010px;
+    color: aliceblue;
+    
+}
+.lead img{
+    width: 1515px;
+    height: 800px;
+}
+
+.lead h1{
+    padding-left: 35vw;
+    font-size: 50px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 0px; /* Adjust this value based on your layout */
+  }
+  
+  .footer .contact-us h2 {
+    margin-bottom: 10px;
+  }
+  
+  .footer .contact-us p {
+    margin: 5px 0;
+  }
+  
+  .footer .contact-us a {
+    color: #4CAF50; /* A nice green color for the email link */
+    text-decoration: none;
+  }
+  
+  .footer .contact-us a:hover {
+    text-decoration: underline;
+  }
+  
+    
+    
+
+
